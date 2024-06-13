@@ -1,24 +1,28 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import classNames from 'classnames';
 
-export default function Header() {
+export default function Header({ isModoNoturno, mudarTema }) {
     return (
-        <nav className="navbar navbar-expand-lg p-4">
-            <a className="navbar-brand" href="#">Cataclismo</a>
+        <nav className={classNames("navbar navbar-expand-lg p-4", { 'bg-dark': isModoNoturno })} style={{ color: isModoNoturno ? 'white' : 'black' }}>
+            <a className="navbar-brand" href="#" style={{ color: isModoNoturno ? 'white' : 'black' }}>Cataclismo</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">Home</a>
+                        <a className="nav-link" href="#" style={{ color: isModoNoturno ? 'white' : 'black' }}>Home</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Peças</a>
+                        <a className="nav-link" href="#" style={{ color: isModoNoturno ? 'white' : 'black' }}>Peças</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Sobre</a>
+                        <a className="nav-link" href="#" style={{ color: isModoNoturno ? 'white' : 'black' }}>Sobre</a>
+                    </li>
+                    <li className="nav-item">
+                        <button onClick={mudarTema} className="btn btn-link nav-link" style={{ color: isModoNoturno ? 'white' : 'black' }}>
+                            Tema
+                        </button>
                     </li>
                 </ul>
             </div>

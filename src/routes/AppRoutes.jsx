@@ -7,7 +7,7 @@ export default function AppRoutes() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Body />}>
-                <Route path="/" element={<Home />}/>
+                    <Route path="/" element={<Home />} />
                 </Route>
             </Routes>
         </BrowserRouter>

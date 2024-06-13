@@ -1,0 +1,22 @@
+.dark-theme {
+    background-color: black;
+    color: white;
+  }
+  
+  .dark-theme .navbar {
+    background-color: black;
+    color: white;
+  }
+  
+  .dark-theme .footer {
+    background-color: black;
+    color: white;
+  }
+
+  html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
